@@ -7,7 +7,12 @@ dotenv.config({ path: './config.env' });
 
 require('./db/conn');
 
+app.use(express.json());
+
 // const User = require('./model/userSchema');
+
+// linked router file too root
+app.use(require('./router/auth'));
 
 const PORT =process.env.PORT;
 
