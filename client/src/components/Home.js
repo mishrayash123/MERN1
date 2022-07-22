@@ -2,7 +2,11 @@ import React from "react";
 
 const Home = () => {
     return (
-        <p>Hello i am yash kumar mishra </p>
+        <div className=" position-absolute top-50 start-50 translate-middle">
+            <h3 className="text-center m-5">Wellcome</h3>
+            <h3 className="text-center m-5">We are </h3>
+            <h3 className="text-center m-5"> MERN developer</h3>
+        </div>
     )
 }
 
