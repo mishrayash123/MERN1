@@ -2,6 +2,7 @@ const jwt = require('jsonwebtoken');
 const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
+const authenticate = require('../middleware/authenticate');
 require('../db/conn');
 
 const User = require("../model/userSchema");
@@ -131,5 +132,13 @@ router.post('/login', async (req, res) => {
     }
 
 })
+
+
+// about us ka page 
+
+
+router.get('/about', authenticate ,(req, res)=>{
+    res.send('hello About');
+});
 
 module.exports = router;
